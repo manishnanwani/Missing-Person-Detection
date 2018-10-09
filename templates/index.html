@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<title>Intelligent Vision</title>
+<!--<h1>Upload new File</h1>-->
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+          function loading(){
+              $("#loading").show();
+              $("#content").hide();
+          }
+  // ]]></script>
+
+<head>
+<style>
+ div#loading {
+
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    display: none;
+    background: url(/static/ajax-loader.gif) no-repeat;
+    cursor: wait;
+    }
+  label#btn{
+    font-size:3.5;
+    color = #333399;
+  }
+.body {
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-image:url(/static/back2.jpg);
+	background-size: cover;
+}
+form {
+	border: 3px solid #f1f1f1;
+}
+/* Set a style for all buttons */
+.btnSubmit {
+	background-color:#85C1E9;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+/* Add a hover effect for buttons */
+button:hover {
+	opacity: 0.8;
+}
+/* Center the avatar image inside this container */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+/* Avatar image */
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+/* Add padding to containers */
+.container {
+	padding: 16px;
+}
+/* The "Forgot password" text */
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+ span.psw {
+ display: block;
+ float: none;
+}
+ .cancelbtn {
+ width: 100%;
+}
+}
+
+</style>
+</head>
+<body background="../static/back2.jpg">
+
+<div id ="loading"></div>
+<div id ="content" align="center" style="margin-top:12%;">
+<center>
+  <h2>Intelligent Vision</h2>
+</center>
+
+<form  method="post" enctype= "multipart/form-data">
+<div class="container">
+  <label id="btn">Upload Video:</label>
+  <input type="file" name="file_video">
+</div>
+ 
+<div class="container">
+  <label id="btn">Upload Image:</label>
+  <input type="file" name="file_image"></br>
+</div>
+  <input class="btnSubmit"  type="submit" value="Generate Matches" onclick="loading()">
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

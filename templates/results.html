@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>
+    table.center {
+    margin-left:auto;
+    margin-right:auto;}
+    </style>
+</head>
+<body>
+	<label>Sample Image</label>
+	<img src="static/sample_img/{{ sample }}" alt="{{ sample }}" width="250" height="250">
+    {% if results %}
+        <table border="1" class="center">
+          <tr>
+          <th>Time Stamp in video </th>
+          <th> Possible Match </th>
+        </tr>
+            <tbody>
+            {% for key in results.keys() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td><img src="static/results/{{ results[key] }}" alt="{{ results[key] }}" width="250" height="250"></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        No matches found
+    {% endif %}
+</body>
+</html>

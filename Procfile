@@ -1,0 +1,1 @@
+web: gunicorn main2 --log-file=-
