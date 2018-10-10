@@ -5,7 +5,7 @@ Building a product, which will take a photo of a person as an input, and given a
 The main python script to run is flask_app.py, which has an explicit call to all the functions fron the Intelligent_Vision.py
 
 
-PS: For this project, worked in a group of 3, as part of the Academic Capstone Project
+The following project was carried out in a group of 3, as a part of the Academic Capstone Project and was completed in 6 weeks, simultaneously along with the regular academics.
 
 Steps Involved:
 
